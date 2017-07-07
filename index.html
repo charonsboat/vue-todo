@@ -10,11 +10,13 @@
   <div id="app">
     <div>
       <!-- input for adding new todo entries -->
-      <input type="text" placeholder="Add an item to the list">
+      <input v-model="new_todo" type="text" placeholder="Add an item to the list">
+      <button @click="add_todo">Add Todo</button>
     </div>
     <div>
       <ul>
         <!-- list todo entries here -->
+        <li v-for="todo in todos">{{ todo }}</li>
       </ul>
     </div>
   </div>
